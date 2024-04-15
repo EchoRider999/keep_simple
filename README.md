@@ -1,10 +1,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="[[https://github.com/github_username/repo_name](https://github.com/EchoRider999/keep_simple)](https://github.com/EchoRider999/keep_simple)">
     <img src="https://i.ibb.co/sPsrCSb/Logo.jpg" alt="Logo" width="80" height="80">
   </a>
-<h1 align="center">📝 Keep simple</h3>
+<h1 align="center">📝 Keep simple</h1>
   <p align="center">
     Keep Simple is a very ✨ simple / 🤏 tiny / ☄️ fast Notes Taking Responsive PHP Web App without database - Google Keep alternative
   </p>
