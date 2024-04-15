@@ -13,18 +13,6 @@ $nombre_max_tentatives = 3;
 // Définition des erreurs
 $errors = [];
 
-// Tableau contenant des phrases aléatoires
-$phrases = array(
-    "La vie est un mystère qu'il faut vivre, et non un problème à résoudre. - Gandhi",
-    "La seule façon de faire du bon travail est d'aimer ce que vous faites. - Steve Jobs",
-    "La vraie grandeur consiste à être maître de soi-même. - Sénèque",
-    "Le succès c’est d’aller d’échec en échec sans perdre son enthousiasme. - Winston Churchill",
-    "L'avenir appartient à ceux qui croient en la beauté de leurs rêves. - Eleanor Roosevelt"
-);
-
-// Sélection aléatoire d'une phrase
-$phrase_aleatoire = $phrases[array_rand($phrases)];
-
 // Vérification si l'utilisateur est déjà connecté
 if(isset($_SESSION['connecte']) && $_SESSION['connecte'] === true) {
     header("Location: $page_protegee");
@@ -44,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: $page_protegee");
         exit();
     } else {
-        $errors[] = $phrase_aleatoire;
         $errors[] = "🔐 Erreur d'identification !";
 
         // Incrémentation du compteur de tentatives de connexion
@@ -125,6 +112,8 @@ $captcha = $_SESSION['captcha'];
                     </span>
                 </div>
             </footer>
+            <link href="https://cdn.jsdelivr.net/npm/bootswatch/dist/slate/bootstrap.min.css" rel="stylesheet">
+            <?php file_exists('citations.php') ? include 'citations.php' : ''; ?>
         </div> <!-- bg-gray-800 p-8 rounded-lg shadow-md w-96 -->
     </div> <!-- flex justify-center items-center py-40 -->
     <script>
