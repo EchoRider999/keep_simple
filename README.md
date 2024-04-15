@@ -26,7 +26,7 @@
 - ✅ Multiple theme selector
 - ✅ Responsive thanks to the magnificent booswatch themes
 
-## ⛓️ Prerequisites
+## ⚙️ Prerequisites
 
 - ➡️ Web Server: Apache / Nginx
 - ➡️ PHP: 8+
@@ -53,6 +53,7 @@ cd keep
 cp config/users.php.sample config/users.php
 # fix permissions
 chmod 600 config/users.php
+chown www-data config/users.php
 # edit file
 vim config/users.php
 ```
@@ -74,10 +75,11 @@ $valid_credentials = [
 cp -p config/encryption_key.php.sample config/encryption_key.php
 # fix permissions
 chmod 600 config/encryption_key.php
+chown www-data config/encryption_key.php
 # edit file
 vim config/encryption_key.php
 ```
-Add your encryption key here (example : `hPRAJqMqR:uZyAc2rQfujz3D4JrrgAgJ34qdYj3` ) :
+Add your encryption key here (for example : `hPRAJqMqR:uZyAc2rQfujz3D4JrrgAgJ34qdYj3` ) :
 ```php
 <?php
 // Encryption key, keep it secure
@@ -96,10 +98,10 @@ chown www-data json
 
 ### 🎉 Enjoy ! Go to `https://_URL_/keep` or equivalent 😉
 
-### 💾 Data location
+## 💾 Data location
 
-- Data are encrypted and stored in JSON files: `json/$login.json`.</p>
-- `json/user1.json` for user1, etc...
+- Data are stored and crypted in JSON files: `json/$login.json`.
+- Exemple : `json/user1.json` for user1, etc...
 - You can check encryption by displaying the file :
 ```bash
 # try to display crypted user1 data
